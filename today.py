@@ -317,7 +317,7 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
         # For age to align properly with other values, need ~30+ dots
         # Current: 27 char string + 5 dots = length param was 32
         # Target: 27 char string + ~30 dots = length param should be ~57
-        age_target_length = 47  # Reduced by 8 to fix alignment
+        age_target_length = 45  # Reduced by 2 more to fix alignment
         
         # For GitHub stats, use observed patterns from SVG
         justify_format(root, 'age_data', age_data, age_target_length)
