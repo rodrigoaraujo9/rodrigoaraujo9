@@ -307,33 +307,28 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
         tree = etree.parse(filename)
         root = tree.getroot()
         
-        # Calculate dynamic lengths for perfect alignment based on actual content
-        def calculate_target_length(text, base_length):
-            """Calculate optimal length for alignment"""
-            text_len = len(str(text))
-            if '🎂' in str(text):
-                text_len -= 1  # Account for emoji visual width
-            # Add padding to ensure proper spacing
-            return max(base_length, text_len + 5)
+        # Based on SVG analysis, calculate proper alignment lengths
+        # Looking at existing patterns:
+        # ". OS:" + 41 dots + "MacOS, Linux" (12 chars) = length param was ~53
+        # ". Host:" + 30 dots + "Universidade do Porto" (21 chars) = length param was ~51
+        # Age data should match this pattern
         
-        # Calculate dynamic target lengths
-        age_length = calculate_target_length(age_data, 25)
-        commit_length = calculate_target_length(f"{commit_data:,}", 20)
-        star_length = calculate_target_length(f"{star_data:,}", 15)
-        repo_length = calculate_target_length(f"{repo_data:,}", 8)
-        contrib_length = calculate_target_length(f"{contrib_data:,}", 8)
-        follower_length = calculate_target_length(f"{follower_data:,}", 12)
-        loc_length = calculate_target_length(f"{loc_data[2]:,}", 12)
+        age_str = str(age_data)
+        # For age to align properly with other values, need ~30+ dots
+        # Current: 27 char string + 5 dots = length param was 32
+        # Target: 27 char string + ~30 dots = length param should be ~57
+        age_target_length = 55  # This will give proper dot count for alignment
         
-        justify_format(root, 'age_data', age_data, age_length)
-        justify_format(root, 'commit_data', commit_data, commit_length)
-        justify_format(root, 'star_data', star_data, star_length)
-        justify_format(root, 'repo_data', repo_data, repo_length)
-        justify_format(root, 'contrib_data', contrib_data, contrib_length)
-        justify_format(root, 'follower_data', follower_data, follower_length)
-        justify_format(root, 'loc_data', loc_data[2], loc_length)
-        justify_format(root, 'loc_add', loc_data[0])  # No dots needed for these
-        justify_format(root, 'loc_del', loc_data[1], 8)  # Small padding for del
+        # For GitHub stats, use observed patterns from SVG
+        justify_format(root, 'age_data', age_data, age_target_length)
+        justify_format(root, 'commit_data', commit_data, 25)  # Current pattern works
+        justify_format(root, 'star_data', star_data, 16)     # Current pattern works  
+        justify_format(root, 'repo_data', repo_data, 10)     # Current pattern works
+        justify_format(root, 'contrib_data', contrib_data)   # No dots needed
+        justify_format(root, 'follower_data', follower_data, 17)  # Current pattern works
+        justify_format(root, 'loc_data', loc_data[2], 15)    # Current pattern works
+        justify_format(root, 'loc_add', loc_data[0])         # No dots needed
+        justify_format(root, 'loc_del', loc_data[1], 8)      # Small padding
         
         tree.write(filename, encoding='utf-8', xml_declaration=True)
         print(f"Successfully updated {filename}")
