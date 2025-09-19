@@ -313,29 +313,26 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
         # ". Host:" + 30 dots + "Universidade do Porto" (21 chars) = length param was ~51
         # Age data should match this pattern
         
-        age_str = str(age_data)
-        # For age to align properly with other values, need ~30+ dots
-        # Current: 27 char string + 5 dots = length param was 32
-        # Target: 27 char string + ~30 dots = length param should be ~57
-        age_target_length = 49  # Fixed: Add 2 more dots
+        # Calculate proper dot alignment based on maximum expected content lengths
+        # Target total width (content + dots) for visual consistency
+        AGE_TARGET = 50      # Age string is longer: "21 years, 2 months, 15 days 🎂"
+        STATS_TARGET = 45    # Numeric stats are shorter: "1,234,567"
         
-        # For GitHub stats, use proper alignment lengths
-        justify_format(root, 'age_data', age_data, age_target_length)
-        justify_format(root, 'commit_data', commit_data, 40)     # Fixed spacing
-        justify_format(root, 'star_data', star_data, 32)        # Fixed spacing  
-        justify_format(root, 'repo_data', repo_data, 24)        # Fixed spacing
-        justify_format(root, 'contrib_data', contrib_data, 28)  # Added dots
-        justify_format(root, 'follower_data', follower_data, 28) # Fixed spacing
-        justify_format(root, 'loc_data', loc_data[2], 27)       # Fixed spacing
-        justify_format(root, 'loc_add', loc_data[0], 35)        # Added dots
-        justify_format(root, 'loc_del', loc_data[1], 25)        # Fixed spacing
+        justify_format(root, 'age_data', age_data, AGE_TARGET)
+        justify_format(root, 'commit_data', commit_data, STATS_TARGET)
+        justify_format(root, 'star_data', star_data, STATS_TARGET)
+        justify_format(root, 'repo_data', repo_data, STATS_TARGET)
+        justify_format(root, 'contrib_data', contrib_data, STATS_TARGET)
+        justify_format(root, 'follower_data', follower_data, STATS_TARGET)
+        justify_format(root, 'loc_data', loc_data[2], STATS_TARGET)
+        justify_format(root, 'loc_add', loc_data[0], STATS_TARGET)
+        justify_format(root, 'loc_del', loc_data[1], STATS_TARGET)
         
         tree.write(filename, encoding='utf-8', xml_declaration=True)
         print(f"Successfully updated {filename}")
     except Exception as e:
         print(f"Error updating {filename}: {e}")
         raise
-
 
 def justify_format(root, element_id, new_text, length=0):
     """
@@ -490,5 +487,6 @@ if __name__ == '__main__':
     print('Total GitHub GraphQL API calls:', '{:>3}'.format(sum(QUERY_COUNT.values())))
 
     for funct_name, count in QUERY_COUNT.items(): print('{:<28}'.format('   ' + funct_name + ':'), '{:>6}'.format(count))
+
 
 
