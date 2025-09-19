@@ -306,15 +306,35 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
     try:
         tree = etree.parse(filename)
         root = tree.getroot()
-        justify_format(root, 'age_data', age_data, 30)  # Increased from 24 to 30 for longer age strings
-        justify_format(root, 'commit_data', commit_data, 22)
-        justify_format(root, 'star_data', star_data, 14)
-        justify_format(root, 'repo_data', repo_data, 6)
-        justify_format(root, 'contrib_data', contrib_data)
-        justify_format(root, 'follower_data', follower_data, 10)
-        justify_format(root, 'loc_data', loc_data[2], 9)
-        justify_format(root, 'loc_add', loc_data[0])
-        justify_format(root, 'loc_del', loc_data[1], 7)
+        
+        # Calculate dynamic lengths for perfect alignment based on actual content
+        def calculate_target_length(text, base_length):
+            """Calculate optimal length for alignment"""
+            text_len = len(str(text))
+            if '🎂' in str(text):
+                text_len -= 1  # Account for emoji visual width
+            # Add padding to ensure proper spacing
+            return max(base_length, text_len + 5)
+        
+        # Calculate dynamic target lengths
+        age_length = calculate_target_length(age_data, 25)
+        commit_length = calculate_target_length(f"{commit_data:,}", 20)
+        star_length = calculate_target_length(f"{star_data:,}", 15)
+        repo_length = calculate_target_length(f"{repo_data:,}", 8)
+        contrib_length = calculate_target_length(f"{contrib_data:,}", 8)
+        follower_length = calculate_target_length(f"{follower_data:,}", 12)
+        loc_length = calculate_target_length(f"{loc_data[2]:,}", 12)
+        
+        justify_format(root, 'age_data', age_data, age_length)
+        justify_format(root, 'commit_data', commit_data, commit_length)
+        justify_format(root, 'star_data', star_data, star_length)
+        justify_format(root, 'repo_data', repo_data, repo_length)
+        justify_format(root, 'contrib_data', contrib_data, contrib_length)
+        justify_format(root, 'follower_data', follower_data, follower_length)
+        justify_format(root, 'loc_data', loc_data[2], loc_length)
+        justify_format(root, 'loc_add', loc_data[0])  # No dots needed for these
+        justify_format(root, 'loc_del', loc_data[1], 8)  # Small padding for del
+        
         tree.write(filename, encoding='utf-8', xml_declaration=True)
         print(f"Successfully updated {filename}")
     except Exception as e:
@@ -328,7 +348,7 @@ def justify_format(root, element_id, new_text, length=0):
     """
     try:
         if isinstance(new_text, int):
-            new_text = f"{'{:,}'.format(new_text)}"
+            new_text = f"{new_text:,}"
         new_text = str(new_text)
         find_and_replace(root, element_id, new_text)
         
@@ -462,7 +482,7 @@ if __name__ == '__main__':
     contrib_data, contrib_time = perf_counter(graph_repos_stars, 'repos', ['OWNER', 'COLLABORATOR', 'ORGANIZATION_MEMBER'])
     follower_data, follower_time = perf_counter(follower_getter, USER_NAME)
 
-    for index in range(len(total_loc)-1): total_loc[index] = '{:,}'.format(total_loc[index]) # format added, deleted, and total LOC
+    # total_loc values are kept as integers for dynamic alignment calculation
 
     svg_overwrite('dark_mode.svg', age_data, commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1])
     svg_overwrite('light_mode.svg', age_data, commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1])
