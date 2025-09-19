@@ -317,18 +317,18 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
         # For age to align properly with other values, need ~30+ dots
         # Current: 27 char string + 5 dots = length param was 32
         # Target: 27 char string + ~30 dots = length param should be ~57
-        age_target_length = 45  # Reduced by 2 more to fix alignment
+        age_target_length = 47  # Add 2 dots back
         
         # For GitHub stats, use observed patterns from SVG
         justify_format(root, 'age_data', age_data, age_target_length)
-        justify_format(root, 'commit_data', commit_data, 25)  # Current pattern works
-        justify_format(root, 'star_data', star_data, 16)     # Current pattern works  
-        justify_format(root, 'repo_data', repo_data, 10)     # Current pattern works
-        justify_format(root, 'contrib_data', contrib_data)   # No dots needed
-        justify_format(root, 'follower_data', follower_data, 17)  # Current pattern works
-        justify_format(root, 'loc_data', loc_data[2], 15)    # Current pattern works
-        justify_format(root, 'loc_add', loc_data[0])         # No dots needed
-        justify_format(root, 'loc_del', loc_data[1], 8)      # Small padding
+        justify_format(root, 'commit_data', commit_data, 22)     # Restored original
+        justify_format(root, 'star_data', star_data, 14)        # Restored original  
+        justify_format(root, 'repo_data', repo_data, 6)         # Restored original
+        justify_format(root, 'contrib_data', contrib_data)      # No dots needed
+        justify_format(root, 'follower_data', follower_data, 10) # Restored original
+        justify_format(root, 'loc_data', loc_data[2], 9)        # Restored original
+        justify_format(root, 'loc_add', loc_data[0])            # No dots needed
+        justify_format(root, 'loc_del', loc_data[1], 7)         # Restored original
         
         tree.write(filename, encoding='utf-8', xml_declaration=True)
         print(f"Successfully updated {filename}")
