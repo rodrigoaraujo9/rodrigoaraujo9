@@ -319,16 +319,16 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
         # Target: 27 char string + ~30 dots = length param should be ~57
         age_target_length = 49  # Fixed: Add 2 more dots
         
-        # For GitHub stats, use observed patterns from SVG
+        # For GitHub stats, use proper alignment lengths
         justify_format(root, 'age_data', age_data, age_target_length)
-        justify_format(root, 'commit_data', commit_data, 22)     # Restored original
-        justify_format(root, 'star_data', star_data, 14)        # Restored original  
-        justify_format(root, 'repo_data', repo_data, 6)         # Restored original
-        justify_format(root, 'contrib_data', contrib_data)      # No dots needed
-        justify_format(root, 'follower_data', follower_data, 10) # Restored original
-        justify_format(root, 'loc_data', loc_data[2], 9)        # Restored original
-        justify_format(root, 'loc_add', loc_data[0])            # No dots needed
-        justify_format(root, 'loc_del', loc_data[1], 7)         # Restored original
+        justify_format(root, 'commit_data', commit_data, 40)     # Fixed spacing
+        justify_format(root, 'star_data', star_data, 32)        # Fixed spacing  
+        justify_format(root, 'repo_data', repo_data, 24)        # Fixed spacing
+        justify_format(root, 'contrib_data', contrib_data, 28)  # Added dots
+        justify_format(root, 'follower_data', follower_data, 28) # Fixed spacing
+        justify_format(root, 'loc_data', loc_data[2], 27)       # Fixed spacing
+        justify_format(root, 'loc_add', loc_data[0], 35)        # Added dots
+        justify_format(root, 'loc_del', loc_data[1], 25)        # Fixed spacing
         
         tree.write(filename, encoding='utf-8', xml_declaration=True)
         print(f"Successfully updated {filename}")
@@ -490,4 +490,5 @@ if __name__ == '__main__':
     print('Total GitHub GraphQL API calls:', '{:>3}'.format(sum(QUERY_COUNT.values())))
 
     for funct_name, count in QUERY_COUNT.items(): print('{:<28}'.format('   ' + funct_name + ':'), '{:>6}'.format(count))
+
 
