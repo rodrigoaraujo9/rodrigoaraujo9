@@ -317,7 +317,7 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
         # For age to align properly with other values, need ~30+ dots
         # Current: 27 char string + 5 dots = length param was 32
         # Target: 27 char string + ~30 dots = length param should be ~57
-        age_target_length = 47  # Add 2 dots back
+        age_target_length = 49  # Fixed: Add 2 more dots
         
         # For GitHub stats, use observed patterns from SVG
         justify_format(root, 'age_data', age_data, age_target_length)
@@ -490,3 +490,4 @@ if __name__ == '__main__':
     print('Total GitHub GraphQL API calls:', '{:>3}'.format(sum(QUERY_COUNT.values())))
 
     for funct_name, count in QUERY_COUNT.items(): print('{:<28}'.format('   ' + funct_name + ':'), '{:>6}'.format(count))
+
