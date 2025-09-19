@@ -276,24 +276,7 @@ def flush_cache(edges, filename, comment_size):
             f.write(hashlib.sha256(node['node']['nameWithOwner'].encode('utf-8')).hexdigest() + ' 0 0 0 0\n')
 
 
-def add_archive():
-    """
-    Several repositories I have contributed to have since been deleted.
-    This function adds them using their last known data
-    """
-    with open('cache/repository_archive.txt', 'r') as f:
-        data = f.readlines()
-    old_data = data
-    data = data[7:len(data)-3] # remove the comment block    
-    added_loc, deleted_loc, added_commits = 0, 0, 0
-    contributed_repos = len(data)
-    for line in data:
-        repo_hash, total_commits, my_commits, *loc = line.split()
-        added_loc += int(loc[0])
-        deleted_loc += int(loc[1])
-        if (my_commits.isdigit()): added_commits += int(my_commits)
-    added_commits += int(old_data[-1].split()[4][:-1])
-    return [added_loc, deleted_loc, added_loc - deleted_loc, added_commits, contributed_repos]
+
 
 def force_close_file(data, cache_comment):
     """
@@ -316,48 +299,69 @@ def stars_counter(data):
     return total_stars
 
 
-
 def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib_data, follower_data, loc_data):
     """
     Parse SVG files and update elements with my age, commits, stars, repositories, and lines written
     """
-    tree = etree.parse(filename)
-    root = tree.getroot()
-    justify_format(root, 'age_data', age_data, 30)  # Increased from 24 to 30 to accommodate longer age strings
-    justify_format(root, 'commit_data', commit_data, 22)
-    justify_format(root, 'star_data', star_data, 14)
-    justify_format(root, 'repo_data', repo_data, 6)
-    justify_format(root, 'contrib_data', contrib_data)
-    justify_format(root, 'follower_data', follower_data, 10)
-    justify_format(root, 'loc_data', loc_data[2], 9)
-    justify_format(root, 'loc_add', loc_data[0])
-    justify_format(root, 'loc_del', loc_data[1], 7)
-    tree.write(filename, encoding='utf-8', xml_declaration=True)
+    try:
+        tree = etree.parse(filename)
+        root = tree.getroot()
+        justify_format(root, 'age_data', age_data, 30)  # Increased from 24 to 30 for longer age strings
+        justify_format(root, 'commit_data', commit_data, 22)
+        justify_format(root, 'star_data', star_data, 14)
+        justify_format(root, 'repo_data', repo_data, 6)
+        justify_format(root, 'contrib_data', contrib_data)
+        justify_format(root, 'follower_data', follower_data, 10)
+        justify_format(root, 'loc_data', loc_data[2], 9)
+        justify_format(root, 'loc_add', loc_data[0])
+        justify_format(root, 'loc_del', loc_data[1], 7)
+        tree.write(filename, encoding='utf-8', xml_declaration=True)
+        print(f"Successfully updated {filename}")
+    except Exception as e:
+        print(f"Error updating {filename}: {e}")
+        raise
+
 
 def justify_format(root, element_id, new_text, length=0):
     """
     Updates and formats the text of the element, and modifes the amount of dots in the previous element to justify the new text on the svg
     """
-    if isinstance(new_text, int):
-        new_text = f"{'{:,}'.format(new_text)}"
-    new_text = str(new_text)
-    find_and_replace(root, element_id, new_text)
-    just_len = max(0, length - len(new_text))
-    if just_len <= 2:
-        dot_map = {0: '', 1: ' ', 2: '. '}
-        dot_string = dot_map[just_len]
-    else:
-        dot_string = ' ' + ('.' * just_len) + ' '
-    find_and_replace(root, f"{element_id}_dots", dot_string)
+    try:
+        if isinstance(new_text, int):
+            new_text = f"{'{:,}'.format(new_text)}"
+        new_text = str(new_text)
+        find_and_replace(root, element_id, new_text)
+        
+        # Handle emoji in age data - emoji takes visual space but affects length calculation
+        display_length = len(new_text)
+        if element_id == 'age_data' and '🎂' in new_text:
+            display_length -= 1  # Emoji takes less visual space than its character count
+        
+        just_len = max(0, length - display_length)
+        if just_len <= 2:
+            dot_map = {0: '', 1: ' ', 2: '. '}
+            dot_string = dot_map[just_len]
+        else:
+            dot_string = ' ' + ('.' * just_len) + ' '
+        find_and_replace(root, f"{element_id}_dots", dot_string)
+    except Exception as e:
+        print(f"Error formatting {element_id}: {e}")
+        raise
 
 
 def find_and_replace(root, element_id, new_text):
     """
     Finds the element in the SVG file and replaces its text with a new value
     """
-    element = root.find(f".//*[@id='{element_id}']")
-    if element is not None:
-        element.text = new_text
+    try:
+        element = root.find(f".//*[@id='{element_id}']")
+        if element is not None:
+            element.text = new_text
+        else:
+            print(f"Warning: Element with id '{element_id}' not found")
+    except Exception as e:
+        print(f"Error finding/replacing element {element_id}: {e}")
+        raise
 
 
 def commit_counter(comment_size):
@@ -458,14 +462,6 @@ if __name__ == '__main__':
     contrib_data, contrib_time = perf_counter(graph_repos_stars, 'repos', ['OWNER', 'COLLABORATOR', 'ORGANIZATION_MEMBER'])
     follower_data, follower_time = perf_counter(follower_getter, USER_NAME)
 
-    # several repositories that I've contributed to have since been deleted.
-    if OWNER_ID == {'id': 'MDQ6VXNlcjU3MzMxMTM0'}: # only calculate for user Andrew6rant
-        archived_data = add_archive()
-        for index in range(len(total_loc)-1):
-            total_loc[index] += archived_data[index]
-        contrib_data += archived_data[-1]
-        commit_data += int(archived_data[-2])
-
     for index in range(len(total_loc)-1): total_loc[index] = '{:,}'.format(total_loc[index]) # format added, deleted, and total LOC
 
     svg_overwrite('dark_mode.svg', age_data, commit_data, star_data, repo_data, contrib_data, follower_data, total_loc[:-1])
@@ -479,4 +475,3 @@ if __name__ == '__main__':
     print('Total GitHub GraphQL API calls:', '{:>3}'.format(sum(QUERY_COUNT.values())))
 
     for funct_name, count in QUERY_COUNT.items(): print('{:<28}'.format('   ' + funct_name + ':'), '{:>6}'.format(count))
-
