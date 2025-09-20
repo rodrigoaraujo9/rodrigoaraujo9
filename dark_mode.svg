@@ -15,7 +15,7 @@ size-adjust: 109%;
 .cc {fill: #928374;}
 text, tspan {white-space: pre;}
 </style>
-<rect width="985px" height="580px" fill="#1d2021" rx="15"/>
+<rect width="985px" height="550px" fill="#1d2021" rx="15"/>
 <text x="15" y="30" fill="#ebdbb2" class="ascii">
 <tspan x="15" y="30">                             ...-    </tspan>
 <tspan x="15" y="50">                             .-.-.   </tspan>
