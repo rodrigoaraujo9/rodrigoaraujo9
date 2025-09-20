@@ -63,10 +63,10 @@ text, tspan {white-space: pre;}
 <tspan x="390" y="370" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Uni</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="value">up202205515@up.pt</tspan>
 <tspan x="390" y="390" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">rodrigoaraujo9</tspan>
 <tspan x="390" y="410" class="cc">. </tspan><tspan class="key">Website</tspan>:<tspan class="cc"> ................................ </tspan><tspan class="value">rodrigoaraujo.pt</tspan>
-<tspan x="390" y="450">- Projects</tspan> -——————————————————————————————————————————————-—-
-<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">Physics</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">gargantua (Black Hole Simulator)</tspan>
-<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">ML</tspan>:<tspan class="cc"> .............. </tspan><tspan class="value">metaheuristic-hospital-scheduler</tspan>
-<tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">Optimization</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">flight-management-system</tspan>
-<tspan x="390" y="530" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">Compilers</tspan>:<tspan class="cc"> ......................... </tspan><tspan class="value">java--compiler</tspan>
+<tspan x="390" y="450">- Projects</tspan> -—————————————————————————————————————————————-—-
+<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">Physics</tspan>:<tspan class="cc"> ........ </tspan><tspan class="value">gargantua (Black Hole Simulator)</tspan>
+<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">ML</tspan>:<tspan class="cc"> ............. </tspan><tspan class="value">metaheuristic-hospital-scheduler</tspan>
+<tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">Optimization</tspan>:<tspan class="cc"> ........... </tspan><tspan class="value">flight-management-system</tspan>
+<tspan x="390" y="530" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">Compilers</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">java--compiler</tspan>
 </text>
 </svg>
