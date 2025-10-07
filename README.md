@@ -58,7 +58,7 @@
   <tbody>
      <tr>
      <td>IEEE RetroJam 2025</td>
-      <td><a href="https://github.com/diogogomesaraujo/sisyphus-retrojam-2025">Sisyphus</a></td>
+      <td><a href="https://github.com/rodrigoaraujo9/sisyphus-retrojam-2025">Sisyphus</a></td>
       <td>Rust, Raylib</td>
      <td>2nd Place</td>
     </tr>
@@ -90,11 +90,6 @@
       <td><a href="https://github.com/rodrigoaraujo9/flight-management-system">Flight Management System</a></td>
       <td>Comprehensive C++ system for intelligent flight routing, network analysis, and airline statistics using graph algorithms.</td>
       <td>C++, Graph Algorithms, BFS/DFS, STL, Haversine Distance</td>
-    </tr>
-     <tr>
-      <td><a href="https://github.com/diogogomesaraujo/arith-ml-tic">arith-ml-tic</a></td>
-      <td>An interpreter for arithmetic functions made with Menhir and OCaml.</td>
-      <td>OCaml, Menhir</td>
     </tr>
   </tbody>
 </table>
