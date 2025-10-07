@@ -15,10 +15,6 @@
 
 ###
 
-<h1 align="center">Hi There! 👋</h1>
-
-###
-
 <h3 align="left">About Me</h3>
 
 ###
