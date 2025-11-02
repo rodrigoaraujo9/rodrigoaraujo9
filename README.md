@@ -19,7 +19,7 @@
 
 ###
 
-<p align="left">My name is Rodrigo Gomes de Araújo and I am a CS Student at FCUP.<br><br>- I'm interested in distributed systems, algorithms, machine learning and optimization problems.<br>- I'm currently in the first year of my master's degree,<br>- In my free time I produce and compose music.</p>
+<p align="left">My name is Rodrigo Gomes de Araújo and I am a CS Student at FCUP.<br><br>- I'm interested in distributed systems, algorithms, machine learning and optimization problems.<br>- I'm currently in the first year of my master's degree.<br>- In my free time I produce and compose music.</p>
 
 ###
 
