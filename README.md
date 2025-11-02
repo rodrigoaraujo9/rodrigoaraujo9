@@ -29,17 +29,6 @@
 
 ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=c,cpp,rust,java,python,postgres,docker,haskell,laravel,ocaml,git)
 
-
-###
-
-<h3 align="left">LeetCode</h3>
-
-###
-
-<img src="https://leetcard.jacoblin.cool/rodrigoaraujo9?theme=dark&font=Allerta&ext=none" alt="LeetCode Stats" />
-
-###
-
 <h3 align="left">Hackathons</h3>
 
 <table>
@@ -76,16 +65,6 @@
       <td><a href="https://github.com/rodrigoaraujo9/gargantua">Gargantua</a></td>
       <td>Interactive black hole simulation with light bending physics, inspired by Interstellar. Features real-time RK4 integration.</td>
       <td>Rust, Raylib, Physics Simulation, RK4, Schwarzschild Metric</td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/rodrigoaraujo9/ufc-fight-outcome-predictor">UFC Fight Predictor</a></td>
-      <td>ML system predicting UFC fight outcomes with 70-80% accuracy using ensemble methods and advanced feature engineering.</td>
-      <td>Python, Streamlit, Scikit-Learn, Random Forest, Neural Networks, SVM</td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/rodrigoaraujo9/flight-management-system">Flight Management System</a></td>
-      <td>Comprehensive C++ system for intelligent flight routing, network analysis, and airline statistics using graph algorithms.</td>
-      <td>C++, Graph Algorithms, BFS/DFS, STL, Haversine Distance</td>
     </tr>
   </tbody>
 </table>
