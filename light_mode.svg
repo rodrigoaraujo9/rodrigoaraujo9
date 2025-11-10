@@ -8,15 +8,15 @@ font-display: swap;
 -webkit-size-adjust: 109%;
 size-adjust: 109%;
 }
-.key {fill: #b57614;}
-.value {fill: #076678;}
-.addColor {fill: #79740e;}
-.delColor {fill: #9d0006;}
-.cc {fill: #7c6f64;}
+.key {fill: #0969da;}
+.value {fill: #1f2328;}
+.addColor {fill: #1a7f37;}
+.delColor {fill: #d1242f;}
+.cc {fill: #57606a;}
 text, tspan {white-space: pre;}
 </style>
-<rect width="985px" height="550px" fill="#f9f5d7" rx="15"/>
-<text x="15" y="30" fill="#282828" class="ascii">
+<rect width="985px" height="550px" fill="#ffffff" rx="15"/>
+<text x="15" y="30" fill="#1f2328" class="ascii">
 <tspan x="15" y="30">                             ...-    </tspan>
 <tspan x="15" y="50">                             .-.-.   </tspan>
 <tspan x="15" y="70">                             ..--.   </tspan>
@@ -43,7 +43,7 @@ text, tspan {white-space: pre;}
 <tspan x="15" y="490">    -:::-..-:******=**:-*+:          </tspan>
 <tspan x="15" y="510">   -:::**:--..-::::--.:+=+**--.      </tspan>
 </text>
-<text x="390" y="30" fill="#282828">
+<text x="390" y="30" fill="#1f2328">
 <tspan x="390" y="30">rodrigoaraujo9</tspan> -———————————————————————————————————————————-
 <tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ......................................... </tspan><tspan class="value">MacOS, Linux</tspan>
 <tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ......................................... </tspan><tspan class="value" id="age_data">21 years</tspan>
