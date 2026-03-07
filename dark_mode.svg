@@ -51,7 +51,7 @@ text, tspan {white-space: pre;}
 <tspan x="390" y="110" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ............ </tspan><tspan class="value">Masters in Computer Science (Student)</tspan>
 <tspan x="390" y="130" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> ................................................. </tspan><tspan class="value">Zed</tspan>
 <tspan x="390" y="150" class="cc">. </tspan>
-<tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Programming</tspan>.<tspan class="key">Languages</tspan>:<tspan class="cc"> ......... </tspan><tspan class="value">Rust, C/C++, Java, Python</tspan>
+<tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Programming</tspan>.<tspan class="key">Languages</tspan>:<tspan class="cc"> ........ </tspan><tspan class="value">Rust, C/C++, Java, Haskell</tspan>
 <tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Programing</tspan>.<tspan class="key">Technologies</tspan>:<tspan class="cc"> ..... </tspan><tspan class="value">Tokio, Tonic, Docker, React</tspan>
 <tspan x="390" y="210" class="cc">. </tspan><tspan class="key">Programing</tspan>.<tspan class="key">Database</tspan>:<tspan class="cc"> ................. </tspan><tspan class="value">PostgreSQL, Sqlite3</tspan>
 <tspan x="390" y="230" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Real</tspan>:<tspan class="cc"> ............. </tspan><tspan class="value">Portuguese, English, Spanish</tspan>
@@ -67,6 +67,6 @@ text, tspan {white-space: pre;}
 <tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">Synthesis</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">mugen</tspan>
 <tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">Physics</tspan>:<tspan class="cc"> ........ </tspan><tspan class="value">gargantua (Black Hole Simulator)</tspan>
 <tspan x="390" y="530" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">Distributed Systems</tspan>:<tspan class="cc"> ...................... </tspan><tspan class="value">tom-rs</tspan>
-<tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">Optimization</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">foxes-and-rabbits</tspan>
+<tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Project</tspan>.<tspan class="key">Functional</tspan>:<tspan class="cc"> ................... </tspan><tspan class="value">lambda-interpreter</tspan>
 </text>
 </svg>
