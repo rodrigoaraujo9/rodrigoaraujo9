@@ -5,12 +5,6 @@
   </picture>
 </a>
 
-<h3 align="left">About Me</h3>
-
-###
-
-<p align="left">My name is Rodrigo Gomes de Araújo and I am a CS Student at FCUP.<br><br>- I'm interested in cryptography, functional programming, distributed systems, algorithms and compilers,<br>- I'm currently in the first year of my master's degree,<br>- In my free time I also like to produce music.</p>
-
 ###
 
 <h3 align="left">Language and Tools</h3>
