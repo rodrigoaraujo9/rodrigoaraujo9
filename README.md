@@ -5,16 +5,6 @@
   </picture>
 </a>
 
-###
-
-<h3 align="left">Language and Tools</h3>
-
-###
-
-![My Skills](https://skillicons.dev/icons?i=rust,haskell,c,cpp,java,postgresql,git,linux)
-
-###
-
 <h3 align="left">Hackathons</h3>
 
 <table>
