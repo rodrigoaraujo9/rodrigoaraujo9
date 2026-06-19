@@ -62,7 +62,7 @@
     </tr>
      <tr>
      <td>Embeded Systems</td>
-      <td><a href="https://github.com/rodrigoaraujo9/synth-c">t-order-book</a></td>
+      <td><a href="https://github.com/rodrigoaraujo9/synth-c">synth-c</a></td>
       <td>An emebeded synthesizer and arduino controller that supports streaming.</td>
       <td>C, POSIX, Miniaudio</td>
      <td>19</td>
