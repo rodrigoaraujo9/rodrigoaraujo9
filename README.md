@@ -85,14 +85,14 @@
      <td>Distributed Systems</td>
       <td><a href="https://github.com/rodrigoaraujo9/ring-tonic">ring-tonic</a></td>
       <td>Implementation of Mutual Exclusion with the Token Ring Algorithm.</td>
-      <td>Rust, Tokio, Sockets</td>
+      <td>Rust, Tokio, Tonic</td>
      <td>18.6</td>
     </tr>
      <tr>
      <td>Distributed Systems</td>
       <td><a href="https://github.com/diogogomesaraujo/monkey2monkey">monkey2monkey</a></td>
       <td>Data Aggregation using Anti-Entropy algorithm in a P2P network.</td>
-      <td>Rust, Tokio</td>
+      <td>Rust, Tokio, Sockets</td>
      <td>18.6</td>
     </tr>
        </tbody>
