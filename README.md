@@ -43,7 +43,7 @@
      <td>Implementation of Programming Languages</td>
       <td><a href="https://github.com/rodrigoaraujo9/lambda-calculus">lambda-calculus</a></td>
       <td>A compiler from an extended λ-calculus to SECD-machine instructions.</td>
-      <td>OCaml, Lambda Calculus, SECD, Strict Evaluation</td>
+      <td>Haskell, Lambda Calculus, Strict Evaluation</td>
      <td>18</td>
     </tr>
      <tr>
