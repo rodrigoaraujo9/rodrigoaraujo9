@@ -92,7 +92,7 @@
     </tr>
      <tr>
      <td>Distributed Systems</td>
-      <td><a href="https://github.com/diogogomesaraujo/monkey2monkey">monkey2monkey</a></td>
+      <td><a href="https://github.com/rodrigoaraujo9/monkey2monkey">monkey2monkey</a></td>
       <td>Data Aggregation using Anti-Entropy algorithm in a P2P network.</td>
       <td>Rust, Tokio, Sockets</td>
      <td>18.6</td>
