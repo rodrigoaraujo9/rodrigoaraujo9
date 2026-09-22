@@ -41,21 +41,7 @@
     </tr>
   </thead>
   <tbody>
-     <tr>
-     <td>Implementation of Programming Languages</td>
-      <td><a href="https://github.com/rodrigoaraujo9/lambda-calculus">lambda-calculus</a></td>
-      <td>A compiler from an extended λ-calculus to SECD-machine instructions.</td>
-      <td>Haskell, Lambda Calculus, Strict Evaluation</td>
-     <td>18</td>
-    </tr>
-     <tr>
-     <td>Implementation of Programming Languages</td>
-      <td><a href="https://github.com/rodrigoaraujo9/garbage-collector">garbage-collector</a></td>
-      <td>A set of garbage collectors for binary trees.</td>
-      <td>C, Mark&Sweep, Mark&Compact, Copy-Collection</td>
-     <td>18</td>
-    </tr>
-     <tr>
+    <tr>
      <td>Security of Systems and Data</td>
       <td><a href="https://github.com/rodrigoaraujo9/blocktion">blocktion</a></td>
       <td>A public ledger for auctions built from scratch.</td>
@@ -68,13 +54,6 @@
       <td>An emebeded synthesizer and arduino controller that supports streaming.</td>
       <td>C, POSIX, Miniaudio</td>
      <td>19</td>
-    </tr>
-     <tr>
-     <td>Parallel Computation</td>
-      <td><a href="https://github.com/rodrigoaraujo9/foxes-and-rabbits">foxes-and-rabbits</a></td>
-      <td>Implemented and parallelized a game similar to Conway's Game of Life.</td>
-      <td>C, OpenMP</td>
-     <td>18</td>
     </tr>
      <tr>
      <td>Distributed Systems</td>
@@ -96,6 +75,27 @@
       <td>Data Aggregation using Anti-Entropy algorithm in a P2P network.</td>
       <td>Rust, Tokio, Sockets</td>
      <td>18.6</td>
+    </tr>
+     <tr>
+     <td>Implementation of Programming Languages</td>
+      <td><a href="https://github.com/rodrigoaraujo9/lambda-calculus">lambda-calculus</a></td>
+      <td>A compiler from an extended λ-calculus to SECD-machine instructions.</td>
+      <td>Haskell, Lambda Calculus, Strict Evaluation</td>
+     <td>18</td>
+    </tr>
+     <tr>
+     <td>Implementation of Programming Languages</td>
+      <td><a href="https://github.com/rodrigoaraujo9/garbage-collector">garbage-collector</a></td>
+      <td>A set of garbage collectors for binary trees.</td>
+      <td>C, Mark&Sweep, Mark&Compact, Copy-Collection</td>
+     <td>18</td>
+    </tr>
+     <tr>
+     <td>Parallel Computation</td>
+      <td><a href="https://github.com/rodrigoaraujo9/foxes-and-rabbits">foxes-and-rabbits</a></td>
+      <td>Implemented and parallelized a game similar to Conway's Game of Life.</td>
+      <td>C, OpenMP</td>
+     <td>18</td>
     </tr>
        </tbody>
 </table>
