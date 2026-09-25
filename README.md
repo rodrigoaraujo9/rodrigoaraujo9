@@ -46,7 +46,7 @@
       <td><a href="https://github.com/rodrigoaraujo9/blocktion">blocktion</a></td>
       <td>A public ledger for auctions built from scratch.</td>
       <td>Rust, Docker, Tokio, Tonic, gRPC, Kademlia, PoW, Ed25519, BLAKE2</td>
-     <td>19.1</td>
+     <td>19</td>
     </tr>
      <tr>
      <td>Embeded Systems</td>
@@ -60,21 +60,21 @@
       <td><a href="https://github.com/rodrigoaraujo9/tom-rs">tom-rs</a></td>
       <td>A Chat Application with Totally-Ordered Multicast Simulation.</td>
       <td>Rust, Tonic, gRPC, Tokio, Protobufs</td>
-     <td>18.6</td>
+     <td>19</td>
     </tr>
     <tr>
      <td>Distributed Systems</td>
       <td><a href="https://github.com/rodrigoaraujo9/ring-tonic">ring-tonic</a></td>
       <td>Implementation of Mutual Exclusion with the Token Ring Algorithm.</td>
       <td>Rust, Tokio, Tonic</td>
-     <td>18.6</td>
+     <td>19</td>
     </tr>
      <tr>
      <td>Distributed Systems</td>
       <td><a href="https://github.com/rodrigoaraujo9/monkey2monkey">monkey2monkey</a></td>
       <td>Data Aggregation using Anti-Entropy algorithm in a P2P network.</td>
       <td>Rust, Tokio, Sockets</td>
-     <td>18.6</td>
+     <td>19</td>
     </tr>
      <tr>
      <td>Implementation of Programming Languages</td>
