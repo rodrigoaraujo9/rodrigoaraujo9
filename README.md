@@ -97,6 +97,20 @@
       <td>C, OpenMP</td>
      <td>18</td>
     </tr>
+     <tr>
+     <td>Artificial Intelligence</td>
+      <td><a href="https://github.com/rodrigoaraujo9/ufc-fight-outcome-predictor">ufc-fight-outcome-predictor</a></td>
+      <td>Predicts UFC fight outcomes from engineered fighter statistics with an ensemble of ML models.</td>
+      <td>Python, scikit-learn, pandas, NumPy, Streamlit</td>
+     <td>20</td>
+    </tr>
+     <tr>
+     <td>Artificial Intelligence</td>
+      <td><a href="https://github.com/rodrigoaraujo9/metaheuristic-hospital-scheduler">metaheuristic-hospital-scheduler</a></td>
+      <td>Hospital admission scheduler comparing six metaheuristics, with an interactive dashboard.</td>
+      <td>Python, Streamlit, Genetic Algorithm, Simulated Annealing, Tabu Search</td>
+     <td>20</td>
+    </tr>
        </tbody>
 </table>
 
