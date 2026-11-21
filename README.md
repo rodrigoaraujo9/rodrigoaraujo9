@@ -7,6 +7,31 @@
 
 <h2> Checkout my work! </h2>
 
+<h3 align="left">Passion Projects</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Description</th>
+      <th>Technologies</th>
+    </tr>
+  </thead>
+  <tbody>
+     <tr>
+      <td><a href="https://github.com/rodrigoaraujo9/mugen">mugen</a></td>
+      <td>A modular synthesizer in Rust that runs in the terminal.</td>
+      <td>Rust, Tokio, Ratatui</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/rodrigoaraujo9/gargantua">gargantua</a></td>
+      <td>A black hole light simmulation based on real physics.</td>
+      <td>Rust, Raylib</td>
+    </tr>
+  </tbody>
+</table>
+
+
 <h3 align="left">Hackathons</h3>
 
 <table>
@@ -112,28 +137,4 @@
      <td>20</td>
     </tr>
        </tbody>
-</table>
-
-<h3 align="left">Personal Projects</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Project</th>
-      <th>Description</th>
-      <th>Technologies</th>
-    </tr>
-  </thead>
-  <tbody>
-     <tr>
-      <td><a href="https://github.com/rodrigoaraujo9/mugen">mugen</a></td>
-      <td>A modular synthesizer in Rust that runs in the terminal.</td>
-      <td>Rust, Tokio, Ratatui</td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/rodrigoaraujo9/gargantua">gargantua</a></td>
-      <td>A black hole light simmulation based on real physics.</td>
-      <td>Rust, Raylib</td>
-    </tr>
-  </tbody>
 </table>
