@@ -31,28 +31,6 @@
   </tbody>
 </table>
 
-
-<h3 align="left">Hackathons</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Event</th>
-      <th>Project</th>
-      <th>Technologies</th>
-     <th>Classification</th>
-    </tr>
-  </thead>
-  <tbody>
-     <tr>
-     <td>IEEE RetroJam 2025</td>
-      <td><a href="https://github.com/rodrigoaraujo9/sisyphus-retrojam-2025">Sisyphus</a></td>
-      <td>Rust, Raylib</td>
-     <td>2nd Place</td>
-    </tr>
-       </tbody>
-</table>
-
 <h3 align="left">University Projects</h3>
 
 <table>
@@ -135,6 +113,27 @@
       <td>Hospital admission scheduler comparing six metaheuristics, with an interactive dashboard.</td>
       <td>Python, Streamlit, Genetic Algorithm, Simulated Annealing, Tabu Search</td>
      <td>20</td>
+    </tr>
+       </tbody>
+</table>
+
+<h3 align="left">Hackathons</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Project</th>
+      <th>Technologies</th>
+     <th>Classification</th>
+    </tr>
+  </thead>
+  <tbody>
+     <tr>
+     <td>IEEE RetroJam 2025</td>
+      <td><a href="https://github.com/rodrigoaraujo9/sisyphus-retrojam-2025">Sisyphus</a></td>
+      <td>Rust, Raylib</td>
+     <td>2nd Place</td>
     </tr>
        </tbody>
 </table>
